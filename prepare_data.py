@@ -43,5 +43,3 @@ copyfile(
     os.path.join('data', 'public_test.csv'),
     os.path.join(ramp_kits_dir, ramp_name, 'data', 'test.csv')
 )
-
-
