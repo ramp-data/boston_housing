@@ -13,7 +13,14 @@ import pandas as pd
 from shutil import copyfile
 from sklearn.model_selection import train_test_split
 
-ramp_kits_dir = os.environ.get('RAMP_KITS_DIR')
+ramp_kits_dir = '../ramp-kits'
+for arg in sys.argv[1:]:
+    tokens = arg.split('=')
+    if tokens[0] == 'ramp_kits_dir':
+        ramp_kits_dir = tokens[1]
+    else:
+        print('Unknown argument {}'.format(tokens[0]))
+        exit(0)
 ramp_name = os.path.basename(os.getcwd())
 
 df = pd.read_csv(os.path.join('data', 'boston_housing.csv'), index_col=0)
