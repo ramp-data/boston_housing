@@ -9,6 +9,7 @@ into the starting kit data/train.csv and data/test.csv.
 """
 
 import os
+import sys
 import pandas as pd
 from shutil import copyfile
 from sklearn.model_selection import train_test_split
