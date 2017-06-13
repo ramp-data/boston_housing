@@ -34,7 +34,6 @@ df_public_train, df_public_test = train_test_split(
 df_public_train.to_csv(os.path.join('data', 'public_train.csv'), index=False)
 df_public_test.to_csv(os.path.join('data', 'public_test.csv'), index=False)
 
-
 # copy starting kit files to <ramp_kits_dir>/<ramp_name>/data
 copyfile(
     os.path.join('data', 'public_train.csv'),
