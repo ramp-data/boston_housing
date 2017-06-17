@@ -25,8 +25,7 @@ for arg in sys.argv[1:]:
 ramp_name = os.path.basename(os.getcwd())
 
 df = pd.read_csv(os.path.join('data', 'boston_housing.csv'), index_col=0)
-df_train, df_test = train_test_split(
-    df, test_size=0.2, random_state=57)
+df_train, df_test = train_test_split(df, test_size=0.2, random_state=57)
 df_train.to_csv(os.path.join('data', 'train.csv'), index=False)
 df_test.to_csv(os.path.join('data', 'test.csv'), index=False)
 
