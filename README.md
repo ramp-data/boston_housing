@@ -7,5 +7,3 @@ Execute
 ```
 python prepare-data.py
 ```
-
-where `<token>` is the private token to fetch the private data.
